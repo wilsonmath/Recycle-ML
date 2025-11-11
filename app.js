@@ -15,7 +15,6 @@ async function init() {
   document.getElementById("imageUpload").addEventListener("change", handleImageUpload);
 }
 async function startWebcam() {
-  // Stop existing webcam if running
   if (webcam) {
     webcam.stop();
     webcam = null;
@@ -42,9 +41,24 @@ async function loop() {
 
 async function predict(input) {
   const prediction = await model.predict(input);
+  let bestPrediction = null;
+  let maxProbability = 0;
+
   for (let i = 0; i < maxPredictions; i++) {
-    const classPrediction = `${prediction[i].className}: ${prediction[i].probability.toFixed(2)}`;
-    labelContainer.childNodes[i].innerHTML = classPrediction;
+    if (prediction[i].probability > maxProbability) {
+      maxProbability = prediction[i].probability;
+      bestPrediction = prediction[i];
+    }
+  }
+  labelContainer.innerHTML = "";
+  if (bestPrediction) {
+    const resultText = bestPrediction.className; 
+    const resultElement = document.createElement("div");
+    resultElement.innerHTML = resultText;
+    resultElement.style.fontSize = "24px";
+    resultElement.style.fontWeight = "bold";
+    
+    labelContainer.appendChild(resultElement);
   }
 }
 
@@ -56,7 +70,6 @@ async function handleImageUpload(event) {
   img.src = URL.createObjectURL(file);
 
   img.onload = async () => {
-    // Stop webcam if running
     if (webcam) {
       webcam.stop();
       webcam = null;
