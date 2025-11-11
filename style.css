@@ -24,9 +24,10 @@ h2 {
 }
 
 .tagline {
+    font-style: bold;
     font-family: "Kite One", serif;
     font-weight: 400;
-    margin-left: 170px;
+    margin-left: 190px;
     margin-bottom: 25px;
     
 }
