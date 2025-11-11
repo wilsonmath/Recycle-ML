@@ -2,17 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>Recycle ML Model</title>
+  <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-  <h2>Teachable Machine Image Model</h2>
-<button onclick="startWebcam()">Start Webcam</button>
-<button onclick="document.getElementById('imageUpload').click()">Upload Image</button>
-<input type="file" id="imageUpload" accept="image/*" style="display:none">
-<div id="webcam-container"></div>
-<div id="label-container"></div>
+  <h2>RecycleML</h2>
+  <div class="tagline">Recycle With Ease</div> 
+  
+  <div class="button-group">
+      <button onclick="startWebcam()">Use Webcam</button>
+      <span class="recycle-icon"><img src = "Recycling-Symbol.png" style="width:30px;height:30px;"></span> 
+      <button onclick="document.getElementById('imageUpload').click()">Upload Image</button>
+  </div>
+  <input type="file" id="imageUpload" accept="image/*" style="display:none">
+  
+  <div id="webcam-container"></div> 
+  
+  <div id="label-container">Result</div> 
+
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
-  <script src="app.js"></script>
+  <script src="app.js"></script> 
 </body>
 </html>
