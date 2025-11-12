@@ -6,11 +6,8 @@
   <title>Recycle ML Model</title>
   <link rel="stylesheet" href="style.css"> 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kite+One&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kite+One&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
   <h2>RecycleML</h2>
@@ -25,10 +22,40 @@
   
   <div id="webcam-container"></div> 
   
-  <div id="label-container">Result</div> 
+  <div id="label-container"></div> 
 
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+  
+    <div id="label-container">
+    <span id="prediction-text"></span>
+  </div>
+  <button id="recycleBtn" disabled>Recycle</button>
+  <span id="recycle-msg" style="margin-left:10px; color:rgb(71, 62, 38);"></span>
+  <div class ="dashboard-title">
+    <h3>Recycling Dashboard</h3>
+  </div>
+
+  <div class="dashboard">
+    <div class="dashboard-thing">
+      <h4>Plastic Recycled</h4>
+      <p>
+        <span id="plasticnum"></span> Bottles
+      </p>
+    </div>
+    <div class="dashboard-thing">
+      <h4>Paper Recycled</h4>
+            <p>
+        <span id="papernum"></span> Papers
+      </p>
+    </div>
+    <div class="dashboard-thing">
+      <h4>Metal Recycled</h4>
+            <p>
+        <span id="metalnum"></span> Cans
+      </p>
+    </div>
+  </div>
   <script src="app.js"></script> 
 </body>
 </html>

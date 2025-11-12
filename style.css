@@ -77,11 +77,94 @@ button:hover {
     object-fit: cover;
 }
 
+
+.dashboard-title h3 {
+    font-size: 20px;
+    font-family: "Kite One", serif;
+    color: var(--color-primary-text);
+    margin: 0;
+    text-align: center;
+}
+
+.dashboard-title {
+    margin-top:30px;
+    background-color: var(--color-secondary-element);
+    padding: 15px 30px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.dashboard {
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    text-align: center;
+}
+
+.dashboard-thing {
+    background-color: var(--color-secondary-element);
+    padding: 20px;
+    border-radius: 10px;
+    width: fit-content;
+    height : fit-content;
+    align-items: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-thing h4 {
+    margin: 10px 0 5px 0;
+    font-size: 16px;
+    color: var(--color-primary-text);
+}
+
+.dashboard-thing p {
+    margin: 10px;
+    font-size: 15px;
+    font-family: "Josefin Sans", sans-serif;
+}
 #label-container {
-    color: var(--color-primary-text); 
+    margin-top: 20px;
     font-size: 28px;
     font-weight: 900;
     text-align: center;
-    margin-top: 30px;
-    padding: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#recycleBtn {
+    margin-top: 10px;
+    background-color: #e98218;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#recycleBtn:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+#recycleBtn:hover:not(:disabled) {
+    background-color: #d87210;
+}
+
+#prediction-text {
+    font-size: 24px;
+    color: var(--color-primary-text);
+}
+
+#recycle-msg {
+    margin-top: 7px;
+    align-self: center;
+    font-size: 13px;
+    font-weight: bold;
 }
