@@ -161,10 +161,3 @@ button:hover {
     font-size: 24px;
     color: var(--color-primary-text);
 }
-
-#recycle-msg {
-    margin-top: 7px;
-    align-self: center;
-    font-size: 13px;
-    font-weight: bold;
-}
