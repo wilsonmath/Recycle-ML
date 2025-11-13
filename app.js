@@ -115,7 +115,7 @@ document.getElementById("recycleBtn").addEventListener("click", () => {
   const prediction = currentPrediction.toLowerCase();
   if (prediction.includes("plastic")) recycleData.plastic++;
   else if (prediction.includes("paper")) recycleData.paper++;
-  else if (prediction.includes("metal")) recycleData.metal++;
+  else if (prediction.includes("aluminum")) recycleData.metal++;
   localStorage.setItem("recycleData", JSON.stringify(recycleData));
   updateDashboard(false);
   btn.disabled = true;
@@ -128,16 +128,7 @@ function onNewPrediction(predictionText) {
   const instructionBox = document.getElementById("recycle-instructions");
   predictionElement.textContent = predictionText;
   recycleBtn.disabled = false;
-  recycleBtn.textContent = "Recycle Now";
-  let instruction = "";
-  if (predictionText.toLowerCase().includes("plastic"))
-    instruction = "Rinse bottles and put them in the plastic recycling bin.";
-  else if (predictionText.toLowerCase().includes("paper"))
-    instruction = "Keep paper dry and avoid contamination before recycling.";
-  else if (predictionText.toLowerCase().includes("metal"))
-    instruction = "Clean cans and flatten them before recycling.";
-  else instruction = "Unknown material type.";
-  instructionBox.textContent = instruction;
+  recycleBtn.textContent = "Recycle Now"
 }
 
 init();
