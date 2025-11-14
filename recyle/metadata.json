@@ -1,1 +1,1 @@
-{"tfjsVersion":"1.7.4","tmVersion":"2.4.10","grayscale":true,"imageSize":96,"packageVersion":"0.8.4-alpha2","packageName":"@teachablemachine/image","timeStamp":"2025-11-11T05:48:32.692Z","userMetadata":{},"modelName":"Recyle","labels":["Plastic Bott...","Aluminum Can","Paper"]}
+{"tfjsVersion":"1.7.4","tmVersion":"2.4.10","packageVersion":"0.8.4-alpha2","packageName":"@teachablemachine/image","timeStamp":"2025-11-14T02:23:58.723Z","userMetadata":{},"modelName":"tm-my-image-model","labels":["Plastic Bottles","Aluminum Cans","Paper"],"imageSize":224}
